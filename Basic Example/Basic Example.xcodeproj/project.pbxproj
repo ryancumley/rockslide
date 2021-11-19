@@ -13,7 +13,7 @@
 		C08D3FA2274729EB00D189D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D3F90274729E900D189D3 /* ContentView.swift */; };
 		C08D3FA3274729EB00D189D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08D3F91274729EB00D189D3 /* Assets.xcassets */; };
 		C08D3FA4274729EB00D189D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08D3F91274729EB00D189D3 /* Assets.xcassets */; };
-		C08D3FAF27472A3300D189D3 /* rockslide in Frameworks */ = {isa = PBXBuildFile; productRef = C08D3FAE27472A3300D189D3 /* rockslide */; };
+		C08D3FB22747388200D189D3 /* rockslide in Frameworks */ = {isa = PBXBuildFile; productRef = C08D3FB12747388200D189D3 /* rockslide */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08D3FAF27472A3300D189D3 /* rockslide in Frameworks */,
+				C08D3FB22747388200D189D3 /* rockslide in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = "Basic Example (iOS)";
 			packageProductDependencies = (
-				C08D3FAE27472A3300D189D3 /* rockslide */,
+				C08D3FB12747388200D189D3 /* rockslide */,
 			);
 			productName = "Basic Example (iOS)";
 			productReference = C08D3F96274729EB00D189D3 /* Basic Example.app */;
@@ -148,7 +148,7 @@
 			);
 			mainGroup = C08D3F89274729E900D189D3;
 			packageReferences = (
-				C08D3FAD27472A3300D189D3 /* XCRemoteSwiftPackageReference "rockslide" */,
+				C08D3FB02747388200D189D3 /* XCRemoteSwiftPackageReference "rockslide" */,
 			);
 			productRefGroup = C08D3F97274729EB00D189D3 /* Products */;
 			projectDirPath = "";
@@ -456,20 +456,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C08D3FAD27472A3300D189D3 /* XCRemoteSwiftPackageReference "rockslide" */ = {
+		C08D3FB02747388200D189D3 /* XCRemoteSwiftPackageReference "rockslide" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ryancumley/rockslide";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = upToNextMinorVersion;
 				minimumVersion = 0.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C08D3FAE27472A3300D189D3 /* rockslide */ = {
+		C08D3FB12747388200D189D3 /* rockslide */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C08D3FAD27472A3300D189D3 /* XCRemoteSwiftPackageReference "rockslide" */;
+			package = C08D3FB02747388200D189D3 /* XCRemoteSwiftPackageReference "rockslide" */;
 			productName = rockslide;
 		};
 /* End XCSwiftPackageProductDependency section */
