@@ -48,6 +48,8 @@ The stream consists of:
 2. View State Management component. Stripped down and trivialized for this example, but an intermediate component which subscribes to the costume generator, and can publish loading, error, and data view states
 3. SwiftUI.View rendering component to display the results of our stream as the random costume ideas arrive.
 
+![a sample app which loads random costume ideas onto the screen](CostumeDemo.gif)![](CostumeDemo.gif)
+
 ## Learn more
 
 The data-flow bindings and tooling provided prefer `one-way data flow`, and are generally in line with the concepts from [The Elm Architecture](https://guide.elm-lang.org/architecture/).
