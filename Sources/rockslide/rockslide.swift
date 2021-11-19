@@ -13,8 +13,8 @@ import SwiftUI
 ///
 ///However, a clever author could certainly compare what the publisher intended as `previous` with how the events actually arrived over the asynchronous boundary, and construct a valid alternate history/sequence/stream, allowing them to "break" the core abstraction of reactive programming: locally well-ordered sequences. In practice, this is unlikely to cause real problems.
 public struct Event<T> {
-    let new: T
-    let previous: T?
+    public let new: T
+    public let previous: T?
 }
 
 ///Similar to PassthroughSubject and CurrentValueSubject, Signal<T> provides a bridge between the Imperative and Reactive worlds. The difference is where PassthroughSubject is ephemeral, and CurrentValueSubject is stateful with respect to a single value (ie. you can query CurrentValueSubject at any moment to learn the current 'state'), Signal remembers not just the current state, but the previous state as well, up to a time history depth of (t - 1)
@@ -42,6 +42,7 @@ public final class Signal<T>: Publisher {
         
         subscribers.enumerated().forEach{
             _ = $0.element.receive(event)
+            //Removing the backpressure mechanism temporarily for these core elements
         }
         
         self.previousValue = self.currentValue
@@ -74,7 +75,7 @@ public protocol ReactiveComponent {
     func react(toNew: UpstreamModel, withPrevious: UpstreamModel)
 }
 
-extension ReactiveComponent {
+public extension ReactiveComponent {
     //The `Diffable` method signature had an empty default implementation to make it an `opt-in` feature
     func react(toNew: UpstreamModel, withPrevious: UpstreamModel) {}
     func erased() -> AnyComponent<Model> { return AnyComponent<Model>(state) }
