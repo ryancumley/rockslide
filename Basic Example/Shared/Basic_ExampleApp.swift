@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-import rockslide
+import routt
 
 @main
 struct Basic_ExampleApp: App {
     var body: some Scene {
         WindowGroup {
             RandomHalloweenCostumeSpawner() ~>> StateManager() ~>> ContentView.self
+//            Numbers() ~>> Letters() ~>> HelpfulSuggestionWizard() ~>> viewMapping(_:) ~>> DoubleTrouble.self
         }
     }
 }

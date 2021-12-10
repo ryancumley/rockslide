@@ -13,7 +13,10 @@
 		C08D3FA2274729EB00D189D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D3F90274729E900D189D3 /* ContentView.swift */; };
 		C08D3FA3274729EB00D189D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08D3F91274729EB00D189D3 /* Assets.xcassets */; };
 		C08D3FA4274729EB00D189D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08D3F91274729EB00D189D3 /* Assets.xcassets */; };
-		C08D3FB22747388200D189D3 /* rockslide in Frameworks */ = {isa = PBXBuildFile; productRef = C08D3FB12747388200D189D3 /* rockslide */; };
+		C0A6DF4A275EEADC004D68F2 /* laramide in Frameworks */ = {isa = PBXBuildFile; productRef = C0A6DF49275EEADC004D68F2 /* laramide */; };
+		C0A6DF4C275EEAE1004D68F2 /* routt in Frameworks */ = {isa = PBXBuildFile; productRef = C0A6DF4B275EEAE1004D68F2 /* routt */; };
+		C0DD02C62763B998005E6C98 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = C0DD02C52763B998005E6C98 /* DequeModule */; };
+		C0DD02C82763BC36005E6C98 /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DD02C72763BC36005E6C98 /* Basic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		C08D3F96274729EB00D189D3 /* Basic Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08D3F9C274729EB00D189D3 /* Basic Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08D3F9E274729EB00D189D3 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C0A6DF47275EDEDB004D68F2 /* rockslide */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rockslide; path = ..; sourceTree = "<group>"; };
+		C0DD02C72763BC36005E6C98 /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Basic.swift; path = Shared/Basic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08D3FB22747388200D189D3 /* rockslide in Frameworks */,
+				C0A6DF4C275EEAE1004D68F2 /* routt in Frameworks */,
+				C0A6DF4A275EEADC004D68F2 /* laramide in Frameworks */,
+				C0DD02C62763B998005E6C98 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,9 +54,12 @@
 		C08D3F89274729E900D189D3 = {
 			isa = PBXGroup;
 			children = (
+				C0DD02C72763BC36005E6C98 /* Basic.swift */,
+				C0A6DF47275EDEDB004D68F2 /* rockslide */,
 				C08D3F8E274729E900D189D3 /* Shared */,
 				C08D3F9D274729EB00D189D3 /* macOS */,
 				C08D3F97274729EB00D189D3 /* Products */,
+				C0A6DF48275EEADC004D68F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +90,13 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		C0A6DF48275EEADC004D68F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,7 +114,9 @@
 			);
 			name = "Basic Example (iOS)";
 			packageProductDependencies = (
-				C08D3FB12747388200D189D3 /* rockslide */,
+				C0A6DF49275EEADC004D68F2 /* laramide */,
+				C0A6DF4B275EEAE1004D68F2 /* routt */,
+				C0DD02C52763B998005E6C98 /* DequeModule */,
 			);
 			productName = "Basic Example (iOS)";
 			productReference = C08D3F96274729EB00D189D3 /* Basic Example.app */;
@@ -149,6 +168,7 @@
 			mainGroup = C08D3F89274729E900D189D3;
 			packageReferences = (
 				C08D3FB02747388200D189D3 /* XCRemoteSwiftPackageReference "rockslide" */,
+				C0DD02C42763B998005E6C98 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = C08D3F97274729EB00D189D3 /* Products */;
 			projectDirPath = "";
@@ -184,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DD02C82763BC36005E6C98 /* Basic.swift in Sources */,
 				C08D3FA1274729EB00D189D3 /* ContentView.swift in Sources */,
 				C08D3F9F274729EB00D189D3 /* Basic_ExampleApp.swift in Sources */,
 			);
@@ -252,6 +273,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -305,6 +328,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -464,13 +489,31 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		C0DD02C42763B998005E6C98 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C08D3FB12747388200D189D3 /* rockslide */ = {
+		C0A6DF49275EEADC004D68F2 /* laramide */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C08D3FB02747388200D189D3 /* XCRemoteSwiftPackageReference "rockslide" */;
-			productName = rockslide;
+			productName = laramide;
+		};
+		C0A6DF4B275EEAE1004D68F2 /* routt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C08D3FB02747388200D189D3 /* XCRemoteSwiftPackageReference "rockslide" */;
+			productName = routt;
+		};
+		C0DD02C52763B998005E6C98 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DD02C42763B998005E6C98 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
