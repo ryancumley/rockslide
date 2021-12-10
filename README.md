@@ -33,10 +33,10 @@ The code is pretty small too, and released under the MIT license, so feel free t
 If you need to verify that you've successfully added the framework to your project, you can temporarily add this to one of your files and make sure the project still compiles:
 
 ```swift
-import rockslide
+import routt
 
 struct Test: ReactiveComponent {
-    let state = Signal<HalloweenCostume>()
+    let state = Signal<Model>()
     enum Model { case good, bad }
     typealias UpstreamModel = ()
 }
